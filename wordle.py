@@ -31,3 +31,12 @@ for guess in possible_guesses:
     if return_pattern(answer, guess) == [2,0,2,0,1]:
         count +=1
 print(count)
+
+possible_patterns = []
+for guess in possible_guesses:
+    possible_patterns.append(return_pattern(answer, guess))
+
+print(possible_patterns)
+
+count_dict = {i:possible_patterns.count(i) for i in possible_patterns}
+print(count_dict)
